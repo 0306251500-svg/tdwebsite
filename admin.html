@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThanhDuy Airline - Quản Trị Hệ Thống</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+    <nav class="navbar admin-nav">
+        <div class="logo">🛠️ Dashboard Admin - ThanhDuy Airline</div>
+        <div>
+            <a href="index.html">Quay lại Trang Chủ</a>
+        </div>
+    </nav>
+
+    <main class="container" style="max-width: 1300px;">
+        <h2 class="section-title">Danh Sách Khách Hàng Đặt Vé</h2>
+        
+        <div class="admin-panel">
+            <div class="stats-box">
+                <span>Tổng số vé đã bán: <strong id="total-tickets">0</strong></span>
+                <button onclick="moPopupXoa()" class="btn-clear">Xóa tất cả dữ liệu</button>
+            </div>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Mã Vé</th>
+                        <th>Hành Khách</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Số CCCD</th>
+                        <th>Chuyến Bay / Combo</th>
+                        <th>Giá Vé</th>
+                        <th>Thời Gian Đặt</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list"></tbody>
+            </table>
+        </div>
+        <div class="employee-section">
+    <h2 class="section-title">🏆 VINH DANH NHÂN VIÊN XUẤT SẮC</h2>
+    <div class="employee-card">
+        <div class="employee-img">
+            <img src="img/gg.jpg" alt="Nhân viên của năm">
+        </div>
+        <div class="employee-details">
+            <h3>MS. Le Anh Nhat  </h3>
+            <p class="role">Tiếp viên trưởng xuất sắc 2026</p>
+            <p class="achievement">Thành tích: Hoàn thành 5,000+ giờ bay an toàn, đạt chỉ số hài lòng khách hàng tuyệt đối (100% CSAT). Người truyền cảm hứng về phong cách phục vụ đẳng cấp của ThanhDuy Airline.</p>
+            <div class="signature">ThanhDuy Airline Management</div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content text-center" style="max-width: 400px; text-align: center;">
+            <div class="warning-icon">⚠️</div>
+            <h2 class="modal-title" style="border-bottom: none; color: #ef4444;">XÁC NHẬN XÓA</h2>
+            <p style="color: #cbd5e1; margin: 15px 0 25px 0; font-size: 15px; line-height: 1.5;">
+                Bạn có chắc chắn muốn <strong style="color: #ef4444;">XÓA VĨNH VIỄN</strong> toàn bộ danh sách khách hàng đặt vé không? Hành động này không thể hoàn tác.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button onclick="dongPopupXoa()" class="btn-cancel">Hủy Bỏ</button>
+                <button onclick="xacNhanXoaHet()" class="btn-confirm-delete">Vẫn Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

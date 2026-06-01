@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThanhDuy Airline - Hệ Thống Đặt Vé Máy Bay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">✈️ ThanhDuy Airline</div>
+        <div>
+            <a href="index.html" class="active">Trang Chủ</a>
+            <a href="admin.html" class="admin-btn">Khu Vực Admin</a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="color: #facc15; text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);">🔥 SĂN COMBO WORLD CUP 2026 ĐỈNH CAO</h1>
+            <p>Trọn gói vé máy bay ThanhDuy Airline, phòng khách sạn hạng sang và tấm vé trực tiếp rực lửa trên khán đài!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Chuyến Bay & Combo Khuyến Mãi Hot</h2>
+        <div class="ticket-grid" id="flight-grid"></div>
+    </main>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="dongPopup()">&times;</span>
+            <h2 class="modal-title">📝 THÔNG TIN ĐẶT VÉ</h2>
+            <p id="modal-flight-info" style="color: #38bdf8; margin-bottom: 20px; font-weight: bold;"></p>
+            
+            <form id="form-thong-tin" onsubmit="xacNhanDatVe(event)">
+                <div class="form-group">
+                    <label>Họ và Tên Hành Khách:</label>
+                    <input type="text" id="khach-ten" placeholder="Ví dụ: NGUYEN VAN A" required>
+                </div>
+                <div class="form-group">
+                    <label>Số Điện Thoại:</label>
+                    <input type="tel" id="khach-sdt" placeholder="Ví dụ: 0912345xxx" required>
+                </div>
+                <div class="form-group">
+                    <label>Số Căn Cước Công Dân (CCCD):</label>
+                    <input type="text" id="khach-cccd" placeholder="Nhập 12 số CCCD" required>
+                </div>
+                <button type="submit" class="btn-submit-booking">Xác Nhận Đăng Ký Vé</button>
+            </form>
+        </div>
+    </div>
+    <div id="success-modal" class="modal">
+    <div class="modal-content text-center" style="max-width: 500px; text-align: center;">
+        <div class="success-icon">🎉</div>
+        <h2 class="modal-title" style="border-bottom: none; color: #34d399; font-size: 28px;">ĐẶT VÉ THÀNH CÔNG!</h2>
+        <div class="success-details" style="margin: 20px 0; text-align: left; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px;">
+            <p style="color: #cbd5e1; margin-bottom: 10px;">Hành khách: <strong id="success-name" style="color: #fff;"></strong></p>
+            <p style="color: #cbd5e1; margin-bottom: 0;">Chuyến bay: <strong id="success-flight" style="color: #34d399;"></strong></p>
+        </div>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Thông tin đã được chuyển tiếp đến hệ thống quản trị ThanhDuy Airline.</p>
+        <button onclick="dongPopupThanhCong()" class="btn-success-close">Tuyệt vời</button>
+    </div>
+</div>
+
+    <script src="js/dulieu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
