@@ -67,7 +67,7 @@ body {
 .hero-section {
     position: relative;
     height: 480px;
-    background: url('gg.jpg') no-repeat center center/cover;
+    background: "gg.jpg" no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
