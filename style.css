@@ -67,7 +67,7 @@ body {
 .hero-section {
     position: relative;
     height: 480px;
-    background: url('img/avt.jpg') no-repeat center center/cover;
+    background: url('avt.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
